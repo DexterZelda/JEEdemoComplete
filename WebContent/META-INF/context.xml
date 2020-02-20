@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://www.jmdoudoux.fr/java/dej/chap-tomcat.htm -->
+<Context>
+	<Resource name="jdbc/pool_cnx"
+		driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+		type="javax.sql.DataSource"
+		url="jdbc:sqlserver://localhost;databasename=JEE_TP"
+		username="sa"
+		password="Pa$$w0rd"
+		maxTotal="50"
+		maxWaitMillis="60000"
+		maxIdle="10" /> <!-- nombre de connexions ouvertes -->
+</Context>

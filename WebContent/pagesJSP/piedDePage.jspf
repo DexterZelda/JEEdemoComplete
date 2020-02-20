@@ -1,0 +1,20 @@
+<!-- pour pouvoir l'inclure par la suite -->
+<%@ page import="java.util.Date"%>
+<%@ page import="java.text.SimpleDateFormat"%>
+<div class="container-fluid">
+	<%!private String ceJour() {
+		final Date date = new Date();
+		return new SimpleDateFormat("EEEE dd/MM/yyyy HH:mm").format(date);
+	}
+
+	String date = " - " + ceJour() + " - ";%>
+	<hr style="border-color: black">
+	<h4>
+		Développeur JEE - <a href="http://www.eni-ecole.fr" target="_blank"
+			title="www.eni-ecole.fr">Site Web de ENI</a><%=date%><a
+			href="javascript:document.location.reload(true);"
+			title="recharger la page">reload</a> - <a href="#haut"
+			title="aller an haut de la page">haut</a>
+	</h4>
+	<hr style="border-color: black">
+</div>

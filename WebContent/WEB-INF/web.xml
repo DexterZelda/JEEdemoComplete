@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Demo1</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- configuration des sessions (temps en minutes) au besoin -->
+	<!-- SI AUCUNE ACTION pendant 1 minute = déconnexion automatique -->
+	<session-config>
+		<session-timeout>4</session-timeout>
+	</session-config>
+	<!-- 2ème façon de rajouter un servlet plutôt que dans le .java -->
+	<servlet>
+		<servlet-name>monServlet</servlet-name>
+		<servlet-class>packageServlet.monServlet</servlet-class>
+		<!-- init du Servlet d'abord -->
+		<init-param>
+			<description>monServlet Mise à jour des données 1</description>
+			<param-name>monServlet_NOM_PARAMETRE_1</param-name>
+			<param-value>monServlet_VALEUR_PARAMETRE_1</param-value>
+		</init-param>
+		<init-param>
+			<description>monServlet Mise à jour des données 2</description>
+			<param-name>monServlet_NOM_PARAMETRE_2</param-name>
+			<param-value>monServlet_VALEUR_PARAMETRE_2</param-value>
+		</init-param>
+		<!-- load du Servlet via ce fichier par ordre -->
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<!-- 2ème façon de rajouter un servlet plutôt que dans le .java -->
+	<servlet>
+		<servlet-name>Servlet2</servlet-name>
+		<servlet-class>packageServlet.Servlet2</servlet-class>
+		<!-- init du Servlet2 via ce fichier par ordre -->
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<!-- 2ème façon de rajouter un servlet plutôt que dans le .java -->
+	<servlet>
+		<servlet-name>servletFormations</servlet-name>
+		<servlet-class>packageServlet.servletFormations</servlet-class>
+		<!-- init du Servlet d'abord -->
+		<init-param>
+			<description>servletFormations Mise à jour des données 1</description>
+			<param-name>servletFormations_NOM_PARAMETRE_1</param-name>
+			<param-value>servletFormations_VALEUR_PARAMETRE_1</param-value>
+		</init-param>
+		<init-param>
+			<description>servletFormations Mise à jour des données 2</description>
+			<param-name>servletFormations_NOM_PARAMETRE_2</param-name>
+			<param-value>servletFormations_VALEUR_PARAMETRE_2</param-value>
+		</init-param>
+		<!-- load du servletFormations via ce fichier par ordre -->
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletListeFormations</servlet-name>
+		<servlet-class>packageServlet.ServletListeFormations</servlet-class>
+		<!-- load du appelPageJspVisible via ce fichier par ordre -->
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletCnxAnimateur</servlet-name>
+		<servlet-class>packageServlet.ServletCnxAnimateur</servlet-class>
+		<!-- init du ServletCnxAnimateur via ce fichier par ordre -->
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletCnxStagiaire</servlet-name>
+		<servlet-class>packageServlet.ServletCnxStagiaire</servlet-class>
+		<!-- init du ServletCnxStagiaire via ce fichier par ordre -->
+		<load-on-startup>6</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>majMdpAnimateur</servlet-name>
+		<servlet-class>packageServlet.majMdpAnimateur</servlet-class>
+		<!-- init du majMdpAnimateur via ce fichier par ordre -->
+		<load-on-startup>7</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>majMdpStagiaire</servlet-name>
+		<servlet-class>packageServlet.majMdpStagiaire</servlet-class>
+		<!-- init du majMdpStagiaire via ce fichier par ordre -->
+		<load-on-startup>8</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>majDataAnimateur</servlet-name>
+		<servlet-class>packageServlet.majDataAnimateur</servlet-class>
+		<!-- init du majDataAnimateur via ce fichier par ordre -->
+		<load-on-startup>9</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>majDataStagiaire</servlet-name>
+		<servlet-class>packageServlet.majDataStagiaire</servlet-class>
+		<!-- init du majDataStagiaire via ce fichier par ordre -->
+		<load-on-startup>10</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletDeconnexion</servlet-name>
+		<servlet-class>packageServlet.ServletDeconnexion</servlet-class>
+		<!-- init du ServletDeconnexion via ce fichier par ordre -->
+		<load-on-startup>11</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ServletAddFormation</servlet-name>
+		<servlet-class>packageServlet.ServletAddFormation</servlet-class>
+		<!-- init du ServletDeconnexion via ce fichier par ordre -->
+		<load-on-startup>12</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>ajouterUnUtilisateur</servlet-name>
+		<servlet-class>packageServlet.ajouterUnUtilisateur</servlet-class>
+		<!-- init du ServletDeconnexion via ce fichier par ordre -->
+		<load-on-startup>13</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>supprimerCompte</servlet-name>
+		<servlet-class>packageServlet.supprimerCompte</servlet-class>
+		<!-- init du ServletDeconnexion via ce fichier par ordre -->
+		<load-on-startup>14</load-on-startup>
+	</servlet>
+	<!-- servlet page JSP -->
+	<servlet>
+		<servlet-name>servletFormationsJSP</servlet-name>
+		<jsp-file>/WEB-INF/listeformations.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>servletAnimateursJSP</servlet-name>
+		<jsp-file>/WEB-INF/pageAnimateurs.jsp</jsp-file>
+	</servlet>
+	<servlet>
+		<servlet-name>servletStagiairesJSP</servlet-name>
+		<jsp-file>/WEB-INF/pageStagiaires.jsp</jsp-file>
+	</servlet>
+	<!-- mapping du servlet concerné -->
+	<servlet-mapping>
+		<servlet-name>monServlet</servlet-name>
+		<url-pattern>/premiereServlet</url-pattern>
+		<url-pattern>/monServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Servlet2</servlet-name>
+		<url-pattern>/deuxiemeServlet</url-pattern>
+		<url-pattern>/Servlet2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletFormations</servlet-name>
+		<url-pattern>/formations/servletFormations</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletFormationsJSP</servlet-name>
+		<url-pattern>/formations/servletFormationsJSP</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletAnimateursJSP</servlet-name>
+		<url-pattern>/animateurs/servletAnimateursJSP</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>servletStagiairesJSP</servlet-name>
+		<url-pattern>/stagiaires/servletStagiairesJSP</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletListeFormations</servlet-name>
+		<url-pattern>/ServletListeFormations</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletCnxAnimateur</servlet-name>
+		<url-pattern>/ServletCnxAnimateur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletCnxStagiaire</servlet-name>
+		<url-pattern>/ServletCnxStagiaire</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>majMdpAnimateur</servlet-name>
+		<url-pattern>/majMdpAnimateur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>majMdpStagiaire</servlet-name>
+		<url-pattern>/majMdpStagiaire</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>majDataAnimateur</servlet-name>
+		<url-pattern>/majDataAnimateur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>majDataStagiaire</servlet-name>
+		<url-pattern>/majDataStagiaire</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletAddFormation</servlet-name>
+		<url-pattern>/ServletAddFormation</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ajouterUnUtilisateur</servlet-name>
+		<url-pattern>/ajouterUnUtilisateur</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ServletDeconnexion</servlet-name>
+		<url-pattern>/ServletDeconnexion</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>supprimerCompte</servlet-name>
+		<url-pattern>/supprimerCompte</url-pattern>
+	</servlet-mapping>
+	<!-- pour mettre les paramètres globaux de connexion BD + id + mdp -->
+	<context-param>
+		<param-name>url_bd</param-name>
+		<param-value>jdbc:sqlserver://localhost;databasename=JEE_TP</param-value>
+	</context-param>
+	<context-param>
+		<param-name>id_bd</param-name>
+		<param-value>sa</param-value>
+	</context-param>
+	<context-param>
+		<param-name>mdp_bd</param-name>
+		<param-value>Pa$$w0rd</param-value>
+	</context-param>
+	<!-- changer la location de la page concernée -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/erreur404.html</location>
+	</error-page>
+	<!-- LES FILTRES -->
+	<filter>
+		<filter-name>videur</filter-name>
+		<filter-class>packageFilter.Videur</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>videur</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	<filter>
+		<filter-name>restrictionIP</filter-name>
+		<filter-class>packageFilter.restrictionIP</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>restrictionIP</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	<filter>
+		<filter-name>CGU</filter-name>
+		<filter-class>packageFilter.CGU</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CGU</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+</web-app>
